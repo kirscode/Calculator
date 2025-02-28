@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFB22C;
+    margin: 0;
+}
+
+.calculator {
+    width: 320px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.display {
+    background: #222;
+    padding: 20px;
+    color: #fff;
+    text-align: right;
+}
+
+#result {
+    width: 100%;
+    height: 50px;
+    font-size: 2.5em;
+    border: none;
+    background: none;
+    color: white;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.white {
+    background: #fff;
+    color: #333;
+}
+
+.grey {
+    background: #a5a5a5;
+    color: #fff;
+}
+
+.orange {
+    background: #f39c12;
+    color: #fff;
+}
+
+.orange.equal {
+    grid-column: span 2;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 8s linear infinite;
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
